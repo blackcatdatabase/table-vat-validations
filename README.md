@@ -2,7 +2,7 @@
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL%208.0%2B-4479A1?logo=mysql&logoColor=white) ![License](https://img.shields.io/badge/license-BlackCat%20Proprietary-red) ![Status](https://img.shields.io/badge/status-stable-informational) ![Generated](https://img.shields.io/badge/generated-from%20schema--map-blue)
 
-> Schema package for table **vat_validations** (repo: $slug).
+> Schema package for table **vat_validations** (repo: `vat-validations`).
 
 ## Files
 ```
@@ -50,11 +50,11 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 ```mermaid
 erDiagram
   VAT_VALIDATIONS {
-    BIGINT id PK
-    VARCHAR(50) vat_id
-    CHAR(2) country_iso2
+    INT id PK
+    VARCHAR vat_id
+    VARCHAR country_iso2
     BOOLEAN valid
-    DATETIME(6) checked_at
+    DATETIME checked_at
     JSON raw
   }
   VAT_VALIDATIONS }o--|| COUNTRIES : "country_iso2"
