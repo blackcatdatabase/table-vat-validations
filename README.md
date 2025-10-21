@@ -57,7 +57,7 @@ erDiagram
     DATETIME(6) checked_at
     JSON raw
   }
-  VAT_VALIDATIONS }o--|| COUNTRIES : (country_iso2)
+  VAT_VALIDATIONS }o--|| COUNTRIES : "country_iso2"
 ```
 
 ## Indexes
