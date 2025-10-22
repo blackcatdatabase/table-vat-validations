@@ -1,4 +1,4 @@
--- Auto-generated from schema-map.psd1 @ 1e83bb6 (2025-10-21T10:18:36+02:00)
+-- Auto-generated from schema-map.psd1 (map@1e83bb6)
 -- table: vat_validations
 CREATE TABLE IF NOT EXISTS vat_validations (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
