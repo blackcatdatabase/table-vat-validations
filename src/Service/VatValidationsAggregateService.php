@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\VatValidations\Service;
 
-use BlackCat\Core\Database\Database;
+use BlackCat\Core\Database;
 use BlackCat\Database\Packages\VatValidations\Dto\VatValidationDto;
 use BlackCat\Database\Packages\VatValidations\Mapper\VatValidationDtoMapper;
 use BlackCat\Database\Packages\VatValidations\Repository\VatValidationRepository;
