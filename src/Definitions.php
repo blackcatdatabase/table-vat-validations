@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\VatValidations;
 final class Definitions {
     // --- základní metadata ---
     public static function table(): string { return 'vat_validations'; }
-    public static function contractView(): string { return 'v_vat_validations_contract'; }
+    public static function contractView(): string { return 'vw_vat_validations'; }
     /** @return string[] */
     public static function columns(): array { return [ 'id', 'vat_id', 'country_iso2', 'valid', 'checked_at', 'raw' ]; }
     public static function pk(): string { return 'id'; }
