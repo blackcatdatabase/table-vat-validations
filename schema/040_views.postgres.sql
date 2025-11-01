@@ -1,4 +1,4 @@
--- Auto-generated from schema-views-postgres.psd1 (map@38d5403)
+-- Auto-generated from schema-views-postgres.psd1 (map@c5e4097)
 -- engine: postgres
 -- table:  vat_validations
 -- Contract view for [vat_validations]
@@ -10,5 +10,5 @@ SELECT
   country_iso2,
   valid,
   checked_at,
-  (checked_at > now() - interval '30 days') AS is_fresh
+  CASE WHEN checked_at > now() - interval '30 days' THEN 1 ELSE 0 END AS is_fresh
 FROM vat_validations;
