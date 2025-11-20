@@ -2,7 +2,7 @@
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL%208.0%2B-4479A1?logo=mysql&logoColor=white) ![License](https://img.shields.io/badge/license-BlackCat%20Proprietary-red) ![Status](https://img.shields.io/badge/status-stable-informational) ![Generated](https://img.shields.io/badge/generated-from%20schema--map-blue)
 
-<!-- Auto-generated from schema-map.psd1 @ 6cefe8e (2025-10-22T20:27:41+02:00) -->
+<!-- Auto-generated from schema-map-postgres.psd1 @ 62c9c93 (2025-11-20T21:38:11+01:00) -->
 
 > Schema package for table **vat_validations** (repo: `vat-validations`).
 
@@ -39,12 +39,12 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 ## Columns
 | Column | Type | Null | Default | Extra |
 |-------:|:-----|:----:|:--------|:------|
-| id | BIGINT UNSIGNED | — | — | AUTO_INCREMENT, PK |
+| id | BIGINT | — | AS | PK |
 | vat_id | VARCHAR(50) | NO | — |  |
 | country_iso2 | CHAR(2) | NO | — |  |
 | valid | BOOLEAN | NO | — |  |
-| checked_at | DATETIME(6) | NO | — |  |
-| raw | JSON | YES | — |  |
+| checked_at | TIMESTAMPTZ(6) | NO | — |  |
+| raw | JSONB | YES | — |  |
 
 ## Relationships
 - FK → **countries** via (country_iso2) (ON DELETE CASCADE).
@@ -56,8 +56,8 @@ erDiagram
     VARCHAR vat_id
     VARCHAR country_iso2
     BOOLEAN valid
-    DATETIME checked_at
-    JSON raw
+    TIMESTAMPTZ checked_at
+    JSONB raw
   }
   VAT_VALIDATIONS }o--|| COUNTRIES : "country_iso2"
 ```
