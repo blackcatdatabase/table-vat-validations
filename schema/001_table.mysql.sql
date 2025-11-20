@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-map-mysql.psd1 (map@734a489)
 -- engine: mysql
 -- table:  vat_validations
 CREATE TABLE IF NOT EXISTS vat_validations (
@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS vat_validations (
   valid BOOLEAN NOT NULL,
   checked_at DATETIME(6) NOT NULL,
   raw JSON NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
