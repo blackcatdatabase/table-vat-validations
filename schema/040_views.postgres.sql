@@ -1,6 +1,7 @@
--- Auto-generated from schema-views-postgres.psd1 (map@62c9c93)
+-- Auto-generated from schema-views-postgres.psd1 (map@mtime:2025-11-27T15:36:13Z)
 -- engine: postgres
 -- table:  vat_validations
+
 -- Contract view for [vat_validations]
 -- Hides raw provider response; adds freshness flag (30 days).
 CREATE OR REPLACE VIEW vw_vat_validations AS

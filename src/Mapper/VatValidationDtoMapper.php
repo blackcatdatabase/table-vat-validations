@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class VatValidationDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'vat_id' => 'vatId', 'country_iso2' => 'countryIso2', 'checked_at' => 'checkedAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'vat_id' => 'vatId', 'country_iso2' => 'countryIso2', 'valid' => 'valid', 'checked_at' => 'checkedAt', 'raw' => 'raw' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [ 'valid' ];
