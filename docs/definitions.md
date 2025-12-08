@@ -6,9 +6,9 @@ External VAT ID validation results (cache).
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
 | country_iso2 | CHAR(2) | NO |  | Country ISO2 of VAT id. |
-| checked_at | TIMESTAMPTZ(6) | NO |  | When checked (UTC). |
+| checked_at | DATETIME(6) | NO |  | When checked (UTC). |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| raw | JSONB | YES |  | Raw JSON response payload. |
+| raw | JSON | YES |  | Raw JSON response payload. |
 | valid | BOOLEAN | NO |  | Validation result (true/false). |
 | vat_id | VARCHAR(50) | NO |  | VAT identifier as provided. |
 
@@ -33,5 +33,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_vat_validations | mysql | algorithm=MERGE, security=INVOKER | [packages\vat-validations\schema\040_views.mysql.sql](https://github.com/blackcatacademy/blackcat-database/packages/vat-validations/schema/040_views.mysql.sql) |
-| vw_vat_validations | postgres |  | [packages\vat-validations\schema\040_views.postgres.sql](https://github.com/blackcatacademy/blackcat-database/packages/vat-validations/schema/040_views.postgres.sql) |
+| vw_vat_validations | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
+| vw_vat_validations | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
