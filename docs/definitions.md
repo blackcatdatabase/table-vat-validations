@@ -5,8 +5,8 @@ External VAT ID validation results (cache).
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| country_iso2 | CHAR(2) | NO |  | Country ISO2 of VAT id. |
 | checked_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO |  | When checked (UTC). |
+| country_iso2 | CHAR(2) | NO |  | Country ISO2 of VAT id. |
 | id | BIGINT | NO |  | Surrogate primary key. |
 | raw | mysql: JSON / postgres: JSONB | YES |  | Raw JSON response payload. |
 | valid | BOOLEAN | NO |  | Validation result (true/false). |
