@@ -41,11 +41,11 @@ final class Criteria extends BaseCriteria
         return [ 'vat_id', 'country_iso2' ];
     }
 
-/** Columns allowed in ORDER BY (falls back to filterable() when empty). */
-protected function sortable(): array
-{
-    return [ 'id', 'vat_id', 'country_iso2', 'valid', 'checked_at' ];
-}
+    /** Columns allowed in ORDER BY (falls back to filterable() when empty). */
+    protected function sortable(): array
+    {
+        return [ 'id', 'vat_id', 'country_iso2', 'valid', 'checked_at' ];
+    }
 
     /**
      * Whitelist of joinable entities (for safe ->join() usage):
