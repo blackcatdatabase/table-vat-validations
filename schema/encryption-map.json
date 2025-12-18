@@ -1,0 +1,26 @@
+{
+  "tables": {
+    "vat_validations": {
+      "columns": {
+        "country_iso2": {
+          "strategy": "passthrough"
+        },
+        "checked_at": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "raw": {
+          "strategy": "passthrough"
+        },
+        "valid": {
+          "strategy": "passthrough"
+        },
+        "vat_id": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
