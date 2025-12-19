@@ -2,10 +2,10 @@
   "tables": {
     "vat_validations": {
       "columns": {
-        "country_iso2": {
+        "checked_at": {
           "strategy": "passthrough"
         },
-        "checked_at": {
+        "country_iso2": {
           "strategy": "passthrough"
         },
         "id": {
